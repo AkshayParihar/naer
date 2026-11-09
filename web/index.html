@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naer Pilates — Reformer Studio, Alwarpet</title>
+<meta name="description" content="Naer Pilates is a small Reformer studio in Alwarpet, Chennai. Small group classes, Monday to Saturday. Book a class on WhatsApp.">
+<meta name="theme-color" content="#E1E2D8">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Naer Pilates — Reformer Studio, Alwarpet">
+<meta property="og:description" content="A small Reformer studio in Alwarpet, Chennai. Small group classes, Monday to Saturday. Book a class on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,380;0,9..144,520;1,9..144,440&family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#E1E2D8;
+    --paper-card:#EDEDE7;
+    --paper-dim:#D2D3C3;
+    --ink:#22221A;
+    --olive:#3B3C29;
+    --olive-deep:#20211A;
+    --sage:#5C5D46;
+    --gold:#B6853A;
+    --gold-deep:#8E6A2C;
+    --gold-pale:#F1D593;
+    --pen:#96432A;
+    --tape: rgba(182,133,58,0.35);
+    --rule: rgba(34,34,26,0.16);
+    --maxw: 1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans', -apple-system, sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    position:relative;
+  }
+  /* paper grain */
+  body::before{
+    content:"";
+    position:fixed; inset:0; pointer-events:none; z-index:0;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/></svg>");
+    mix-blend-mode:multiply;
+  }
+  h1,h2,h3, .display{
+    font-family:'Fraunces', Georgia, serif;
+    font-weight:520;
+    letter-spacing:-0.01em;
+    margin:0;
+    color:var(--ink);
+  }
+  .hand{
+    font-family:'Caveat','Fraunces',cursive;
+    font-weight:600;
+    color:var(--pen);
+    line-height:1.25;
+  }
+  a{color:inherit;}
+  img{max-width:100%;height:auto;display:block;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 32px; position:relative; z-index:1;}
+
+  @media (prefers-reduced-motion: reduce){ *{animation:none !important; transition:none !important;} }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(243,236,217,0.88);
+    backdrop-filter: blur(6px);
+    border-bottom:1px dashed var(--rule);
+  }
+  .nav-inner{ max-width:var(--maxw); margin:0 auto; padding:8px 32px; display:flex; align-items:center; justify-content:space-between; }
+  .brand{display:flex; align-items:center; gap:10px; text-decoration:none;}
+  .brand img{height:88px; width:auto; transform:rotate(-3deg);}
+  nav.links{display:flex; gap:26px; align-items:center;}
+  nav.links a.plain{ text-decoration:none; font-size:15px; color:var(--ink); opacity:0.75; }
+  nav.links a.plain:hover{opacity:1;}
+  .btn{
+    display:inline-block; padding:12px 22px; border-radius:3px; text-decoration:none;
+    font-size:14.5px; font-weight:500; letter-spacing:0.01em;
+    transition:transform .18s ease;
+    box-shadow:2px 3px 0 rgba(42,35,24,0.18);
+  }
+  .btn:hover{transform:translate(-1px,-2px);}
+  .btn:active{transform:translate(1px,1px); box-shadow:1px 1px 0 rgba(42,35,24,0.18);}
+  .btn-primary{background:var(--olive); color:var(--paper-card);}
+  .btn-gold{background:var(--gold); color:#241a05;}
+  .btn-outline{background:var(--paper-card); border:1px solid var(--rule); color:var(--ink); box-shadow:2px 3px 0 rgba(42,35,24,0.10);}
+  .nav-cta{padding:9px 18px; font-size:13.5px;}
+
+  /* ---------- HERO ---------- */
+  .hero{ padding:8px 0 90px; }
+  .hero .wrap{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:50px; align-items:center; }
+  .hero-eyebrow{ font-size:14.5px; color:var(--sage); margin-bottom:16px; }
+  .hero h1{ font-size:clamp(36px,4.6vw,54px); line-height:1.08; max-width:13ch; }
+  .hero h1 em{ font-style:italic; font-weight:440; color:var(--gold-deep); }
+  .hero p.lede{ margin-top:22px; max-width:48ch; font-size:17.5px; color:#40392a; }
+  .hero-bullets{ margin:18px 0 0; padding:0; list-style:none; max-width:46ch; }
+  .hero-bullets li{ position:relative; padding-left:20px; margin-bottom:10px; font-size:16.5px; line-height:1.5; color:#40392a; }
+  .hero-bullets li::before{ content:"—"; position:absolute; left:0; color:var(--gold-deep); }
+  .hero-actions{ margin-top:14px; display:flex; gap:14px; flex-wrap:wrap; align-items:center; position:relative;}
+  .margin-note{
+    margin-top:22px;
+    display:flex; align-items:center; gap:8px;
+    transform:rotate(-2.5deg);
+  }
+  .pron-note{ font-size:20px; margin:10px 0 22px; transform:rotate(-1deg); }
+  .margin-note svg{width:46px; height:34px; flex:none;}
+  .margin-note span{ font-size:22px; }
+
+  /* polaroid */
+  .polaroid{
+    background:#fff; padding:14px 14px 46px;
+    box-shadow:0 14px 30px rgba(42,35,24,0.22);
+    transform:rotate(3deg);
+    position:relative;
+    max-width:380px; margin:0 auto;
+  }
+  .polaroid img{ width:100%; aspect-ratio:1/1; object-fit:cover; }
+  .polaroid .cap{
+    position:absolute; left:0; right:0; bottom:10px; text-align:center;
+    font-size:21px; color:var(--ink);
+  }
+  .tape{
+    position:absolute; width:78px; height:26px; background:var(--tape);
+    border:1px solid rgba(182,133,58,0.5);
+    box-shadow:0 2px 4px rgba(0,0,0,0.08);
+  }
+  .polaroid .tape.t1{ top:-14px; left:-18px; transform:rotate(-38deg); }
+  .polaroid .tape.t2{ top:-14px; right:-18px; transform:rotate(38deg); }
+
+  /* ---------- SECTION SHARED ---------- */
+  section{padding:80px 0;}
+  .section-head{max-width:640px; margin-bottom:44px;}
+  .section-kicker{color:var(--gold-deep); font-size:14.5px; margin-bottom:10px;}
+  .section-head h2{font-size:clamp(27px,3.2vw,36px); line-height:1.15;}
+
+  /* ---------- PEEK (studio walkthrough) ---------- */
+  .peek{ padding-top:0; }
+  .peek .wrap{ display:grid; grid-template-columns:0.85fr 1.15fr; gap:44px; align-items:center; }
+  .peek-frame{
+    background:#fff; padding:12px 12px 12px;
+    box-shadow:0 14px 30px rgba(34,34,26,0.22);
+    transform:rotate(-1.6deg);
+    position:relative; max-width:340px;
+  }
+  .peek-frame img{ width:100%; display:block; }
+  .peek-frame .cap{ margin:12px 4px 2px; text-align:center; font-size:20px; color:var(--ink); }
+  .peek-frame .tape.t1{ top:-14px; left:-16px; transform:rotate(-30deg); }
+  .peek-frame .tape.t2{ top:-14px; right:-16px; transform:rotate(30deg); }
+
+  /* ---------- PHILOSOPHY (torn note taped to page) ---------- */
+  .philosophy{ background:var(--paper-dim); border-top:1px dashed var(--rule); border-bottom:1px dashed var(--rule); }
+  .philosophy .wrap{ display:grid; grid-template-columns:110px 1fr; gap:30px; align-items:start; }
+  .doodle{width:74px; height:auto;}
+  .note-card{
+    background:var(--paper-card);
+    padding:30px 34px;
+    box-shadow:0 8px 18px rgba(42,35,24,0.14);
+    transform:rotate(-1.2deg);
+    position:relative;
+    max-width:560px;
+  }
+  .note-card .tape{ top:-14px; left:36px; transform:rotate(-6deg); }
+  .note-card blockquote{
+    margin:0; font-family:'Fraunces',serif; font-style:italic; font-weight:440;
+    font-size:clamp(21px,2.4vw,27px); line-height:1.45; color:var(--ink);
+  }
+  .note-card p.attribution{ margin-top:16px; font-family:'Work Sans',sans-serif; font-style:normal; font-size:14px; color:var(--sage); }
+
+  /* ---------- WHAT IS PILATES (info list) ---------- */
+  #what-is-pilates{ background:var(--paper-dim); border-top:1px dashed var(--rule); border-bottom:1px dashed var(--rule); }
+  #practice{ background:var(--paper); }
+  #schedule{ background:var(--paper-dim); border-top:1px dashed var(--rule); border-bottom:1px dashed var(--rule); }
+  .info-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:26px 44px;
+    margin-top:8px;
+  }
+  .info-item{ display:flex; gap:12px; align-items:flex-start; }
+  .info-item svg{ flex:none; width:22px; height:22px; margin-top:2px; }
+  .info-item p{ font-size:15.5px; color:#40392a; max-width:36ch; }
+
+  /* ---------- PRACTICE (pinned index cards) ---------- */
+  .practice-board{ display:flex; gap:32px; flex-wrap:wrap; padding-top:10px; }
+  .index-card{
+    background:var(--paper-card);
+    width:230px; padding:28px 22px 24px;
+    box-shadow:0 10px 20px rgba(42,35,24,0.16);
+    position:relative;
+    background-image:repeating-linear-gradient(transparent, transparent 27px, var(--rule) 28px);
+  }
+  .index-card:nth-child(1){ transform:rotate(-2.2deg); }
+  .index-card:nth-child(2){ transform:rotate(1.6deg); }
+  .index-card:nth-child(3){ transform:rotate(-1.4deg); }
+  .index-card:nth-child(4){ transform:rotate(2deg); }
+  .index-card:hover{ transform:rotate(0deg) translateY(-3px); transition:transform .25s ease; }
+  .pin{
+    position:absolute; top:-9px; left:50%; transform:translateX(-50%);
+    width:16px; height:16px; border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #e08a6e, var(--pen) 70%);
+    box-shadow:0 3px 4px rgba(0,0,0,0.3);
+  }
+  .index-card .freq{ font-family:'Work Sans',sans-serif; font-weight:500; color:var(--sage); font-size:13px; letter-spacing:0.02em; }
+  .index-card h3{ font-size:24px; margin:8px 0 10px; }
+  .index-card p{ font-family:'Caveat',cursive; color:var(--pen); font-size:19px; line-height:1.3; max-width:24ch; }
+  .practice-note{
+    margin-top:34px; font-size:15px; color:var(--sage); display:flex; gap:10px; align-items:center;
+  }
+
+  /* ---------- SCHEDULE (receipt) ---------- */
+  .receipt{
+    background:var(--paper-card);
+    max-width:340px;
+    padding:28px 26px;
+    font-family:'Space Mono', monospace;
+    font-size:13.5px;
+    box-shadow:0 10px 22px rgba(42,35,24,0.16);
+    transform:rotate(-1deg);
+    position:relative;
+  }
+  .receipt::before, .receipt::after{
+    content:""; position:absolute; left:0; right:0; height:10px;
+    background:repeating-linear-gradient(90deg, transparent 0 6px, var(--paper) 6px 14px);
+  }
+  .receipt::before{ top:-5px; }
+  .receipt::after{ bottom:-5px; }
+  .receipt .title{ text-align:center; font-weight:700; letter-spacing:0.06em; margin-bottom:14px; }
+  .receipt .row{ display:flex; justify-content:space-between; padding:5px 0; border-bottom:1px dashed var(--rule); }
+  .receipt .row:last-of-type{ border-bottom:none; }
+  .receipt .closed{ text-align:center; margin-top:14px; color:var(--sage); }
+  .schedule-flex{ display:flex; gap:44px; flex-wrap:wrap; align-items:flex-start; }
+  .schedule-note{ max-width:30ch; padding-top:10px; }
+
+  /* ---------- LOCATION ---------- */
+  .location{ background:var(--paper); border-top:1px dashed var(--rule); border-bottom:1px dashed var(--rule); }
+  .location .wrap{ display:grid; grid-template-columns:1fr auto; gap:36px; align-items:center; }
+  .location h2{ font-size:clamp(23px,2.6vw,30px); max-width:17ch; }
+  .location p{ margin-top:12px; color:#40392a; max-width:36ch; }
+
+  /* ---------- BOOK / CTA BAND ---------- */
+  .book-band{ background:var(--olive-deep); color:var(--paper); padding:90px 0; text-align:center; }
+  .book-band .section-kicker{ color:var(--gold-pale); }
+  .book-band h2{ color:var(--paper); font-size:clamp(28px,3.8vw,42px); max-width:16ch; margin:0 auto; }
+  .book-band p{ color:rgba(243,236,217,0.75); max-width:42ch; margin:18px auto 0; font-size:16.5px; }
+  .book-actions{ margin-top:34px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+  .book-band .btn-outline{ background:transparent; border:1px solid rgba(243,236,217,0.35); color:var(--paper); box-shadow:none; }
+  .contact-row{ margin-top:36px; display:flex; gap:30px; justify-content:center; flex-wrap:wrap; font-size:15px; color:rgba(243,236,217,0.75); }
+  .contact-row a{ text-decoration:none; border-bottom:1px solid rgba(243,236,217,0.35); padding-bottom:2px; }
+  .contact-row a:hover{ border-color:var(--gold-pale); color:var(--gold-pale); }
+
+  footer{ padding:36px 0; }
+  footer .wrap{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; }
+  .footer-brand{ display:flex; align-items:center; gap:10px; }
+  .footer-brand img{ height:56px; width:auto; transform:rotate(-3deg); }
+  .footer-brand span.hand{ font-size:22px; }
+  footer .fine{ font-size:13px; color:var(--sage); }
+
+  @media (max-width: 860px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .peek-frame{margin:0 auto;}
+    .info-grid{grid-template-columns:1fr;}
+    .philosophy .wrap{grid-template-columns:1fr;}
+    .doodle{display:none;}
+    .location .wrap{grid-template-columns:1fr; text-align:left;}
+    .practice-board{justify-content:center;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top"><img src="assets/logo.png" width="360" height="360" alt="Naer Pilates"></a>
+    <nav class="links">
+      <a href="#book" class="btn btn-primary nav-cta">Book a class</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>We are NAER.</h1>
+        <p class="pron-note hand">(நேர், Tamil for "straight")</p>
+        <p class="lede">Reformer Pilates in Alwarpet, Chennai. Here's the pitch, no fluff:</p>
+        <ul class="hero-bullets">
+          <li>Every session led by a Pilates-certified physiotherapist.</li>
+          <li>Small by design: max 4 per group, private sessions available too.</li>
+          <li>Quiet, unrushed, and built to feel like home.</li>
+        </ul>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#book">Book a class</a>
+        </div>
+      </div>
+      <div class="peek-frame">
+        <div class="tape t1"></div>
+        <div class="tape t2"></div>
+        <img src="assets/studio.gif" width="300" height="533" alt="Walkthrough of the Naer Pilates studio">
+        <p class="cap hand">real footage, wobbly camera and all</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IS PILATES -->
+  <section id="what-is-pilates">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-kicker">The basics</p>
+        <h2>Reformer Pilates, in case you're wondering.</h2>
+      </div>
+      <div class="info-grid">
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5 L9.5 18 L20 5" stroke="#B6853A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p>Low-impact — kind to knees, backs, and anyone easing back into movement.</p>
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5 L9.5 18 L20 5" stroke="#B6853A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p>Built for beginners and regulars alike — the machine adjusts, not you.</p>
+        </div>
+        <div class="info-item">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5 L9.5 18 L20 5" stroke="#B6853A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p>Improves posture, core strength, and balance, without a single burpee.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRACTICE -->
+  <section id="practice">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-kicker">The practice</p>
+        <h2>Reformer group classes. Come as often as you can commit to.</h2>
+      </div>
+      <div class="practice-board">
+        <div class="index-card">
+          <div class="pin"></div>
+          <span class="freq">trial class</span>
+          <h3>Explore</h3>
+          <p>(Come see what the fuss is about)</p>
+        </div>
+        <div class="index-card">
+          <div class="pin"></div>
+          <span class="freq">one-time class</span>
+          <h3>Move</h3>
+          <p>(No package, no pressure, just today)</p>
+        </div>
+        <div class="index-card">
+          <div class="pin"></div>
+          <span class="freq">twice a week</span>
+          <h3>Align</h3>
+          <p>(The sweet spot between "I should exercise" and actually doing it)</p>
+        </div>
+        <div class="index-card">
+          <div class="pin"></div>
+          <span class="freq">thrice a week</span>
+          <h3>Evolve</h3>
+          <p>(Because progress is rather addictive)</p>
+        </div>
+      </div>
+      <p class="practice-note">
+        <svg width="26" height="20" viewBox="0 0 26 20" fill="none"><path d="M2 10 C 8 2, 16 2, 24 10" stroke="#A8442B" stroke-width="2" stroke-linecap="round"/></svg>
+        Pricing's not on the wall yet — ask us directly, we'll tell you straight.
+      </p>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section id="schedule" style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:34px;">
+        <p class="section-kicker">Studio hours</p>
+        <h2>Monday to Saturday. Sundays are for everyone's springs to rest.</h2>
+      </div>
+      <div class="schedule-flex">
+        <div class="receipt">
+          <div class="title">NAER PILATES</div>
+          <div class="row"><span>MON–SAT</span><span>6AM–12PM</span></div>
+          <div class="row"><span>MON–SAT</span><span>5PM–8PM</span></div>
+          <div class="closed">*** SUNDAYS: CLOSED ***</div>
+        </div>
+        <p class="schedule-note hand">even reformers need a day off</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="location" id="location">
+    <div class="wrap">
+      <div>
+        <h2>Alwarpet-ish. Google gets you the rest.</h2>
+        <p>Central enough, and the sunlight entering through our window makes up for the drive.</p>
+      </div>
+      <a class="btn btn-outline" href="https://share.google/kG9LE1zvZtbaqfGz0" target="_blank" rel="noopener">Find us on Maps</a>
+    </div>
+  </section>
+
+  <!-- BOOK -->
+  <section class="book-band" id="book">
+    <div class="wrap">
+      <p class="section-kicker">Get in touch</p>
+      <h2>Come make friends with the reformer.</h2>
+      <p>Message us on WhatsApp or Instagram. We will take care of the rest.</p>
+      <div class="book-actions">
+        <a class="btn btn-gold" id="whatsappBtn" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" style="vertical-align:-4px;margin-right:6px;"><path d="M12 3a9 9 0 0 0-7.79 13.44L3 21l4.72-1.24A9 9 0 1 0 12 3z" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 9.5c.3 2 2 3.7 4 4l1-1.2c.2-.2.5-.3.8-.2l1.6.6c.3.1.5.4.5.7v1.1c0 .5-.4 1-1 1-3.9-.2-7-3.3-7.2-7.2 0-.6.4-1 1-1h1.1c.3 0 .6.2.7.5l.6 1.6c.1.3 0 .6-.2.8L8.5 9.5z" fill="currentColor"/></svg>Book on WhatsApp
+        </a>
+        <a class="btn btn-outline" href="tel:+919384840787">Call instead</a>
+      </div>
+      <div class="contact-row">
+        <a href="https://instagram.com/naerwellness" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" style="vertical-align:-3px;margin-right:5px;"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg>@naerwellness
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand">
+      <img src="assets/logo.png" width="360" height="360" alt="Naer Pilates">
+      <span class="hand">same time next week?</span>
+    </div>
+    <p class="fine">© <span id="year"></span> Naer Wellness. Alwarpet, Chennai.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var msg = encodeURIComponent("Hi! I'd like to book a Reformer class at Naer Pilates.");
+  document.getElementById('whatsappBtn').href = "https://wa.me/919384840787?text=" + msg;
+</script>
+
+</body>
+</html>
